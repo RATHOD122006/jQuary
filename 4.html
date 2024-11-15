@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <form id="myForm">
+        <input type="text" id="cmnt"><br />
+        <button type="submit">submit</button>
+
+        <br />
+        <br />
+
+
+        <p>
+
+        </p>
+    </form>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+
+            $("#myForm").submit((event) => {
+                event.preventDefault();
+
+                let cmnt = $("#cmnt").val();
+
+                $("p").append(`${cmnt} <br>`);
+
+                $("#cmnt").val(" ")
+            })
+
+
+        })
+    </script>
+
+</body>
+
+</html>
